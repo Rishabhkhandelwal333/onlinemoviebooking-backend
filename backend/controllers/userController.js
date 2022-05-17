@@ -25,7 +25,7 @@ exports.registerUser = catchAsyncErrors( async (req,res,next)=>{
         },
     });
 
-   
+    console.log("reached Token");
     sendToken(user,201,res);
 });
 
@@ -58,7 +58,7 @@ exports.loginUser = catchAsyncErrors (async(req,res,next)=>{
 exports.logout = catchAsyncErrors (async(req,res,next)=>{
     res.cookie("token",null,{
         expires:m=new Date(Date.now()),
-        httpOnly:true
+        httpsOnly:true
     })
 
     res.status(200).json({

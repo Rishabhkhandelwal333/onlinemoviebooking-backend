@@ -7,6 +7,7 @@ const sendToken = (user,statuscode,res)=>{
         ),
         httpOnly : true,
     };
+    console.log("cokkeie st");
     res.status(statuscode).cookie('token',token,options).json({
         success : true,
         user,
