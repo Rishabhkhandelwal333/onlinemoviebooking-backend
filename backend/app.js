@@ -39,6 +39,8 @@ app.use("/api/v1",payment);
 app.get('/', (req, res) => {
     res.send('Hello World!')
   });
+
+  
 // app.use(express.static(path.join(__dirname,"../frontend/build")));
 
 // app.get("*",(req,res)=>{

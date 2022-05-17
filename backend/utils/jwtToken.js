@@ -6,12 +6,12 @@ const sendToken = (user,statuscode,res)=>{
             Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 1000
         ),
         secure:true,
-        httpOnly : true,
-        sameSite: 'none',
-      
+        httpOnly:true,
+        sameSite:'none',
+        maxAge: process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60, 
     };
     console.log("cokkeie st");
-    res.status(statuscode).cookie('token',token,options).json({
+    res.status(statuscode).cookies.set('token',token,options).json({
         success : true,
         user,
         token,
