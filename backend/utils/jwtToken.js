@@ -7,8 +7,7 @@ const sendToken = (user,statuscode,res)=>{
         ),
         secure:true,
         httpOnly:true,
-        sameSite:'none',
-        maxAge: process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60, 
+        sameSite:'none', 
     };
     console.log("cokkeie st");
     res.status(statuscode).cookie('token',token,options).json({
