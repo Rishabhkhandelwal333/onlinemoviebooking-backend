@@ -11,7 +11,7 @@ const sendToken = (user,statuscode,res)=>{
         maxAge: process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60, 
     };
     console.log("cokkeie st");
-    res.status(statuscode).cookies.set('token',token,options).json({
+    res.status(statuscode).cookie('token',token,options).json({
         success : true,
         user,
         token,
