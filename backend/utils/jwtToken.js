@@ -7,6 +7,7 @@ const sendToken = (user,statuscode,res)=>{
         ),
         secure:true,
         httpOnly : true,
+        sameSite: 'none',
       
     };
     console.log("cokkeie st");
