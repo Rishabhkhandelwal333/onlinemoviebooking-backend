@@ -8,7 +8,7 @@ const errorMiddleware = require("./midlleware/error");
 const path = require("path");
 const corsConfig = {
   credentials: true,
-  origin: true,
+  origin:" https://glittery-blancmange-c9bf39.netlify.app",
 };
 __dirname = path.resolve()
 
