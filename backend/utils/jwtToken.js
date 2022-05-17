@@ -1,5 +1,5 @@
 //Create token and saving in cookie 
-const sendTokern = (user,statuscode,res)=>{
+const sendToken = (user,statuscode,res)=>{
     const token = user.getJWTToken();
     const options = {
         expires:new Date(
@@ -15,4 +15,4 @@ const sendTokern = (user,statuscode,res)=>{
     });
 };
 
-module.exports = sendTokern;
+module.exports = sendToken;
