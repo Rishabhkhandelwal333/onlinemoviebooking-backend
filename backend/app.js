@@ -8,7 +8,7 @@ const errorMiddleware = require("./midlleware/error");
 const path = require("path");
 const corsConfig = {
   credentials: true,
-  origin:" https://glittery-blancmange-c9bf39.netlify.app",
+  origin:"https://onlinemoviebooking-frontend.herokuapp.com",
 };
 __dirname = path.resolve()
 
@@ -18,7 +18,7 @@ if(process.env.NODE_ENV !=="PRODUCTION"){
     require("dotenv").config({path:"backend/config/config.env"});
 }
 
-
+app.set("trust proxy",1);
 app.use(cors(corsConfig));
 app.use(express.json())
 app.use(cookieParser());
