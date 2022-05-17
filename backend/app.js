@@ -33,6 +33,7 @@ app.use("/api/v1",movie);
 app.use("/api/v1",user);
 app.use("/api/v1",order);
 app.use("/api/v1",payment);
+app.use(errorMiddleware);
 app.get('/', (req, res) => {
     res.send('Hello World!')
   });
@@ -42,6 +43,5 @@ app.get('/', (req, res) => {
 //     res.sendFile(path.resolve(__dirname,'frontend','build','index.html'));
 // })
 //Middleware for error 
-app.use(errorMiddleware);
 
 module.exports=app
