@@ -8,7 +8,7 @@ const errorMiddleware = require("./midlleware/error");
 const path = require("path");
 
 const corsConfig = {
-  credentials: include,
+  credentials: false,
   origin:"https://subtle-kringle-c7fed5.netlify.app",
 };
 __dirname = path.resolve()
@@ -37,7 +37,7 @@ app.use("/api/v1",movie);
 app.use("/api/v1",user);
 app.use("/api/v1",order);
 app.use("/api/v1",payment);
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.set('Access-Control-Allow-Origin', '*')
   res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
   res.set('Access-Control-Allow-Headers', 'Content-Type')
