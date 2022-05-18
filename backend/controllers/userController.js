@@ -25,7 +25,6 @@ exports.registerUser = catchAsyncErrors( async (req,res,next)=>{
         },
     });
 
-    console.log("reached Token");
     sendToken(user,201,res);
 });
 
