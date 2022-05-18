@@ -38,6 +38,9 @@ app.use("/api/v1",user);
 app.use("/api/v1",order);
 app.use("/api/v1",payment);
 app.get('/', (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*')
+  res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
+  res.set('Access-Control-Allow-Headers', 'Content-Type')
     res.send('Hello World!')
   });
 
