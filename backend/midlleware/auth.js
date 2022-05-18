@@ -6,8 +6,12 @@ const User  = require("../models/userModel");
 
 exports.isAuthenticatedUser = catchAsyncErrors(async(req,res,next)=>{
 
+    const token ="";
+    if (typeof window !== 'undefined') {
+     
+         token = localStorage.getItem("token");
+      }
     //const {token} = req.cookies;
-    const token = localStorage.getItem("token");
     if(!token){
         return next(new ErrorHandler("please login to acesss this resources",401));
     }

@@ -9,8 +9,12 @@ const sendToken = (user,statuscode,res)=>{
     //     httpOnly:true,
     //     sameSite:'none', 
     // };
-   
+
+    if (typeof window !== 'undefined') {
+     
     localStorage.setItem("token",token);
+      }
+   
     console.log("token generated");
     res.status(statuscode).json({
         success : true,

@@ -7,10 +7,6 @@ const fileUpload = require("express-fileupload");
 const errorMiddleware = require("./midlleware/error");
 const path = require("path");
 
-if (!window) {
-  require('localstorage-polyfill');
-}
-
 const corsConfig = {
   credentials: true,
   origin:"https://onlinemoviebooking-frontend.herokuapp.com",
