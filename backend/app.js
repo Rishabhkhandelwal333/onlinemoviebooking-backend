@@ -9,7 +9,7 @@ const path = require("path");
 
 const corsConfig = {
   credentials: true,
-  origin:"https://delightful-basbousa-88361e.netlify.app",
+  origin:"https://subtle-kringle-c7fed5.netlify.app",
 };
 __dirname = path.resolve()
 

@@ -11,11 +11,7 @@ const sendToken = (user,statuscode,res)=>{
     };
 
    
-    // if (typeof window !== 'undefined') {
-     
-    // localStorage.setItem("token",token);
-    //   }
-    return res.status(statuscode).cookie('token', token,options).json({
+    return res.status(statuscode).cookie('token',token,options).json({
         success : true,
         user,
         token,
