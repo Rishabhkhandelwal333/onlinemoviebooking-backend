@@ -9,7 +9,7 @@ const path = require("path");
 
 const corsConfig = {
   credentials: true,
-  origin:"https://onlinemoviebooking-frontend.herokuapp.com",
+  origin:"https://delightful-basbousa-88361e.netlify.app",
 };
 __dirname = path.resolve()
 
