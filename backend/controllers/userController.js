@@ -56,8 +56,10 @@ exports.loginUser = catchAsyncErrors (async(req,res,next)=>{
 
 exports.logout = catchAsyncErrors (async(req,res,next)=>{
     res.cookie("token",null,{
-        expires:m=new Date(Date.now()),
-        httpsOnly:true
+        expires: new Date(Date.now()),
+        httpOnly:true,
+        secure: env.ENVIRONMENT === 'LIVE',
+        sameSite: env.ENVIRONMENT === 'LIVE' ? 'none' : 'lax',
     })
 
     res.status(200).json({

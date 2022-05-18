@@ -5,18 +5,17 @@ const sendToken = (user,statuscode,res)=>{
         expires:new Date(
             Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 1000
         ),
-        secure:true,
-        httpOnly:true,
-        sameSite:'none', 
+        secure: env.ENVIRONMENT === 'LIVE',
+        sameSite: env.ENVIRONMENT === 'LIVE' ? 'none' : 'lax',
+        httpOnly: true,
     };
 
+   
     // if (typeof window !== 'undefined') {
      
     // localStorage.setItem("token",token);
     //   }
-    res.cookie("token", token,options);
-    console.log("token generated");
-    res.status(statuscode).json({
+    return res.status(statuscode).cookie('token', token,options).json({
         success : true,
         user,
         token,
