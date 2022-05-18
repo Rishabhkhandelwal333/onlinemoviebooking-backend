@@ -9,8 +9,10 @@ const sendToken = (user,statuscode,res)=>{
     //     httpOnly:true,
     //     sameSite:'none', 
     // };
-    console.log("cokkeie st");
-    res.status(statuscode).localStorage.setItem('token',token).json({
+   
+    localStorage.setItem("token",token);
+    console.log("token generated");
+    res.status(statuscode).json({
         success : true,
         user,
         token,
