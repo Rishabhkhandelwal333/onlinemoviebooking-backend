@@ -11,7 +11,7 @@ const sendToken = (user,statuscode,res)=>{
     };
 
    
-    return res.status(statuscode).cookie('token',token,options).json({
+     res.status(statuscode).cookie('token', token ,options).json({
         success : true,
         user,
         token,
