@@ -8,7 +8,6 @@ const errorMiddleware = require("./midlleware/error");
 const path = require("path");
 
 const corsConfig = {
-  credentials:true,
   origin:"https://jolly-narwhal-8887ed.netlify.app",
 };
 __dirname = path.resolve()
