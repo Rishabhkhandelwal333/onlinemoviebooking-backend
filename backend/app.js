@@ -44,8 +44,6 @@ app.use(function (request, response, next) {
   next();
 });
 app.get('/', (req, res) => {
-  res.set('Access-Control-Allow-Origin', '/')
-  res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
     res.send('Hello World!')
   });
 
