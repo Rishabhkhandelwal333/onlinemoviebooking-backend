@@ -43,14 +43,9 @@ app.use(function (request, response, next) {
   response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-app.get('*', (req, res) => {
-  res.set('Access-Control-Allow-Origin', '*')
+app.get('/', (req, res) => {
+  res.set('Access-Control-Allow-Origin', '/')
   res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
-  
-  res.set('Access-Control-Allow-Methods', 'POST, OPTIONS')
-  
-  res.set('Access-Control-Allow-Methods', 'PUT, OPTIONS')
-  res.set('Access-Control-Allow-Headers', 'Content-Type')
     res.send('Hello World!')
   });
 
