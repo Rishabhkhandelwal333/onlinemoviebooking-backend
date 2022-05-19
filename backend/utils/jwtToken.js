@@ -5,8 +5,8 @@ const sendToken = (user,statuscode,res)=>{
         expires:new Date(
             Date.now() + process.env.COOKIE_EXPIRE * 24 * 60 * 1000
         ),
-        secure: env.ENVIRONMENT === 'LIVE',
-        sameSite: env.ENVIRONMENT === 'LIVE' ? 'none' : 'lax',
+        secure: process.env.ENVIRONMENT === 'LIVE',
+        sameSite: process.env.ENVIRONMENT === 'LIVE' ? 'none' : 'lax',
         httpOnly: true,
     };
 
