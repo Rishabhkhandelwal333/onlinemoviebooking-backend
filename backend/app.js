@@ -33,12 +33,13 @@ const user = require("./routes/userRoute");
 const order = require("./routes/orderRoute");
 const payment = require("./routes/paymentRoute");
 
+
 app.use("/api/v1",movie);
 app.use("/api/v1",user);
 app.use("/api/v1",order);
 app.use("/api/v1",payment);
-app.get('/', (req, res) => {
-  res.set('Access-Control-Allow-Origin', '/')
+app.get('*', (req, res) => {
+  res.set('Access-Control-Allow-Origin', '*')
   res.set('Access-Control-Allow-Methods', 'GET, OPTIONS')
   
   res.set('Access-Control-Allow-Methods', 'POST, OPTIONS')
